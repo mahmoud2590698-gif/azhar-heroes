@@ -1,0 +1,27 @@
+{
+ "name": "أبطال الأزهر — ألعاب تعليمية للصفوف ٣ و٤ و٦",
+ "short_name": "أبطال الأزهر",
+ "description": "تطبيق أسئلة وألغاز للأزهر الابتدائي: ١٥٠٠ سؤال بشرحها، تلميحات محدودة لكل مادة، وركن لبابا وماما. يعمل بدون إنترنت بعد التثبيت.",
+ "lang": "ar",
+ "dir": "rtl",
+ "start_url": "index.html",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#0d3b3a",
+ "theme_color": "#0d3b3a",
+ "icons": [
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "any"
+  },
+  {
+   "src": "icon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "maskable"
+  }
+ ]
+}

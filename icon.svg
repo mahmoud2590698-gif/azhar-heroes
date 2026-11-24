@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10544e"/>
+      <stop offset="1" stop-color="#08262c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#1e7869" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1e7869" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <!-- gold badge -->
+  <circle cx="256" cy="205" r="140" fill="#d4a020"/>
+  <circle cx="256" cy="205" r="133" fill="#125e54"/>
+  <circle cx="256" cy="205" r="124" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <!-- star -->
+  <path d="M256 108 L269 141 L304 142 L276 163 L286 197 L256 177 L226 197 L236 163 L208 142 L243 141 Z" fill="#f5c542"/>
+  <path d="M176 158 L181 170 L194 170 L184 178 L187 191 L176 183 L165 191 L168 178 L158 170 L171 170 Z" fill="#ffe182"/>
+  <path d="M336 158 L341 170 L354 170 L344 178 L347 191 L336 183 L325 191 L328 178 L318 170 L331 170 Z" fill="#ffe182"/>
+  <!-- open book -->
+  <path d="M174 218 L256 236 L256 330 L174 312 Z" fill="#f5c542"/>
+  <path d="M338 218 L256 236 L256 330 L338 312 Z" fill="#f5c542"/>
+  <path d="M182 224 L256 241 L256 322 L182 306 Z" fill="#fff8e1"/>
+  <path d="M330 224 L256 241 L256 322 L330 306 Z" fill="#f3eacd"/>
+  <g stroke="#146e60" stroke-width="5" stroke-linecap="round">
+    <line x1="198" y1="252" x2="240" y2="261"/>
+    <line x1="198" y1="272" x2="240" y2="281"/>
+    <line x1="198" y1="292" x2="240" y2="301"/>
+    <line x1="272" y1="261" x2="314" y2="252"/>
+    <line x1="272" y1="281" x2="314" y2="272"/>
+    <line x1="272" y1="301" x2="314" y2="292"/>
+  </g>
+  <line x1="256" y1="240" x2="256" y2="324" stroke="#d4a020" stroke-width="4"/>
+  <!-- title -->
+  <text x="256" y="428" text-anchor="middle" font-family="'Segoe UI',Tahoma,Arial,sans-serif" font-size="62" font-weight="800" fill="#ffffff">أبطال الأزهر</text>
+  <line x1="154" y1="452" x2="233" y2="452" stroke="#f5c542" stroke-width="5" stroke-linecap="round"/>
+  <line x1="279" y1="452" x2="358" y2="452" stroke="#f5c542" stroke-width="5" stroke-linecap="round"/>
+  <path d="M256 444 L264 452 L256 460 L248 452 Z" fill="#f5c542"/>
+  <text x="256" y="490" text-anchor="middle" font-family="'Segoe UI',Tahoma,Arial,sans-serif" font-size="24" font-weight="600" fill="#bee6dc">الصف الثالث والرابع والسادس</text>
+</svg>
