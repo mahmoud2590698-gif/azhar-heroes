@@ -1,0 +1,17 @@
+{
+  "name": "كلماتي الأولى — رياض الأطفال",
+  "short_name": "كلماتي",
+  "description": "تطبيق تعليمي بصري للكلمات والحروف والأرقام في رياض الأطفال.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./kg.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff5fa",
+  "theme_color": "#ff5e9c",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
