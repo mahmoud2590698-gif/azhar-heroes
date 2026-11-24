@@ -1,4 +1,4 @@
-const C='azhar-heroes-v2';
+const C='azhar-heroes-v3';
 const ASSETS=['./','index.html','grade1.html','grade2.html','grade3.html','grade4.html','grade5.html','grade6.html','manifest.webmanifest','icon.svg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
