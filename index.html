@@ -101,17 +101,17 @@ input:focus,select:focus{border-color:#1a7a6d}
     <label>صفّك الدراسي</label>
     <div class="grades" role="radiogroup" aria-label="الصف الدراسي">
       <label class="gcard"><input type="radio" name="grade" value="1">
-        <span><span class="num">١</span><b>الصف الأول</b><small>250 سؤالًا<br>قرآن • دين • عربي • رياضيات • إنجليزي</small></span></label>
+        <span><span class="num">١</span><b>الصف الأول</b><small>300 سؤالًا<br>قرآن • دين • عربي • رياضيات • إنجليزي</small></span></label>
       <label class="gcard"><input type="radio" name="grade" value="2">
         <span><span class="num">٢</span><b>الصف الثاني</b><small>300 سؤالًا<br>قرآن • دين • عربي • رياضيات • إنجليزي</small></span></label>
       <label class="gcard"><input type="radio" name="grade" value="3">
         <span><span class="num">٣</span><b>الصف الثالث</b><small>400 سؤالًا<br>قرآن • دين • عربي • رياضيات • إنجليزي</small></span></label>
       <label class="gcard"><input type="radio" name="grade" value="4">
-        <span><span class="num">٤</span><b>الصف الرابع</b><small>500 سؤالًا<br>+ علوم ودراسات وتكنولوجيا</small></span></label>
+        <span><span class="num">٤</span><b>الصف الرابع</b><small>498 سؤالًا<br>+ علوم ودراسات وتكنولوجيا</small></span></label>
       <label class="gcard"><input type="radio" name="grade" value="5">
         <span><span class="num">٥</span><b>الصف الخامس</b><small>482 سؤالًا<br>+ علوم ودراسات وتكنولوجيا</small></span></label>
       <label class="gcard"><input type="radio" name="grade" value="6">
-        <span><span class="num">٦</span><b>الصف السادس</b><small>600 سؤالًا<br>كل المواد + ألغاز قوية</small></span></label>
+        <span><span class="num">٦</span><b>الصف السادس</b><small>600 سؤالًا<br>كل المواد + ألغاز قوية</small></span></label>       <label class="gcard"><input type="radio" name="grade" value="7">         <span><span class="num">٧</span><b>الصف الأول الإعدادي</b><small>400 سؤالًا<br>قرآن • علوم • دراسات • إنجليزي</small></span></label>       <label class="gcard"><input type="radio" name="grade" value="8">         <span><span class="num">٨</span><b>الصف الثاني الإعدادي</b><small>200 سؤالًا<br>علوم • دراسات • إنجليزي • جبر</small></span></label>       <label class="gcard"><input type="radio" name="grade" value="9">         <span><span class="num">٩</span><b>الصف الثالث الإعدادي</b><small>300 سؤالًا<br>علوم • دراسات • إنجليزي • جبر • هندسة</small></span></label>
     </div>
 <div style="margin-top:12px"><a href="kg.html" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#ff5e9c,#ff8fb8);color:#fff;border-radius:18px;padding:14px 18px;text-decoration:none;box-shadow:0 8px 20px rgba(255,94,156,.35)"><span style="font-size:36px">🌸</span><span><b style="font-size:20px">رياض الأطفال — كلماتي الأولى</b><br><small>حروف وكلمات بالحركات وأرقام وألوان وأشكال — لعب بصري من غير صوت، وبصورة طفلك</small></span></a></div>
 
@@ -160,8 +160,8 @@ var D={};
 var KEY="azhar_child_v3";
 var QUOTES=["من جدّ وجد، ومن زرع حصد.","العلم في الصِّغَر كالنقش على الحجر.","خطوة صغيرة كل يوم تصنع بطلًا كبيرًا.","الأبطال لا يستسلمون أبدًا.","كل سؤال جديد يجعلك أقوى.","العلم نور والجهل ظلام.","من طلب العلا سهر الليالي.","بالعلم تُبنى الأمم وتُصنع الأحلام.","المحاولة الأولى بداية كل نجاح.","اليوم تتعلم، وغدًا تُعلّم.","همّة الأبطال تصنع المستحيل.","اقرأ، فكّر، جرّب… هكذا ينجح العلماء."];
 var AVATARS=["🦁","🐯","🦊","🐼","🦄","🐥","🚀","⚽","🌟","🦋"];
-var GRADES={1:"الصف الأول الابتدائي",2:"الصف الثاني الابتدائي",3:"الصف الثالث الابتدائي",4:"الصف الرابع الابتدائي",5:"الصف الخامس الابتدائي",6:"الصف السادس الابتدائي"};
-var COUNTS={1:250,2:300,3:400,4:500,5:482,6:600};
+var GRADES={1:"الصف الأول الابتدائي",2:"الصف الثاني الابتدائي",3:"الصف الثالث الابتدائي",4:"الصف الرابع الابتدائي",5:"الصف الخامس الابتدائي",6:"الصف السادس الابتدائي",7:"الصف الأول الإعدادي",8:"الصف الثاني الإعدادي",9:"الصف الثالث الإعدادي"};
+var COUNTS={1:300,2:300,3:400,4:498,5:482,6:600,7:400,8:200,9:300};
 function arNum(n){return String(n).replace(/[0-9]/g,function(d){return "٠١٢٣٤٥٦٧٨٩"[d]})}
 function ageWord(a){return a===1?"سنة واحدة":a===2?"سنتان":a<=10?arNum(a)+" سنين":arNum(a)+" سنة"}
 function $(id){return document.getElementById(id)}
