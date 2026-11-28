@@ -82,7 +82,7 @@ input:focus,select:focus{border-color:#1a7a6d}
 
   <form class="card" id="profileForm" novalidate>
     <h2>👋 لاعب جديد؟ عرّفنا بنفسك</h2>
-    <p class="hint">اكتب اسمك وسنك واختار صفك، وهنرحب بيك ترحيبًا خاصًا ونظبط لك اللعبة على مقاسك.</p>
+    <p class="hint">اكتب اسمك وسنّك واختر صفّك، وسنرحّب بك ترحيبًا خاصًا ونضبط لك اللعبة على مقاسك.</p>
 
     <label for="fName">اسمك إيه؟</label>
     <input type="text" id="fName" maxlength="20" autocomplete="off" placeholder="مثال: أحمد">
@@ -162,7 +162,7 @@ input:focus,select:focus{border-color:#1a7a6d}
   <div class="card hidden" id="sectionsCard">
     <h2>📚 أقسام اللعبة</h2>
     <p class="hint">كل قسم لوحده، وتقدمك في كل صف محفوظ باسمك أنت بس.</p>
-    <p class="hint" id="visitorLine" style="text-align:center;font-size:15px">👋 أهلًا وسهلًا بيك في «أبطال المستقبل» — <b>أنت الزائر رقم <span id="visitorNo">…</span></b></p>
+    <p class="hint" id="visitorLine" style="text-align:center;font-size:15px">👋 أهلًا وسهلًا بك في «أبطال المستقبل» — <b>أنت الزائر رقم <span id="visitorNo">…</span></b></p>
     <h3 style="margin:16px 0 8px">🌸 رياض الأطفال</h3>
     <a href="kg.html" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#ff5e9c,#ff8fb8);color:#fff;border-radius:18px;padding:14px 18px;text-decoration:none;box-shadow:0 8px 20px rgba(255,94,156,.35)"><span style="font-size:36px">🌸</span><span><b style="font-size:20px">رياض الأطفال — كلماتي الأولى</b><br><small>حروف وكلمات وعوالم لعب بصرية — قسم مستقل للأطفال الصغيرين</small></span></a>
     <h3 style="margin:20px 0 8px">📗 المرحلة الابتدائية</h3>
@@ -291,7 +291,7 @@ function showWelcome(c){
   var verb=c.gender==="g"?"جاهزة":"جاهز";
   $("wAv").textContent=c.avatar||"🦁";
   $("wTitle").textContent="أهلًا يا "+c.name+"! 🎉";
-  $("wLine1").textContent="أهلًا وسهلًا بيك يا "+who+"! ملفك الخاص جاهز، وتقدمك محفوظ باسمك أنت بس.";
+  $("wLine1").textContent="أهلًا وسهلًا بك يا "+who+"! ملفك الخاص جاهز، وتقدّمك محفوظ باسمك أنت فقط.";
   $("wCard").innerHTML="⭐ <b>الاسم:</b> "+c.name+"<br>🎂 <b>السن:</b> عندك "+ageWord(c.age)+"<br>🎓 <b>الصف:</b> "+GRADES[c.grade]+(c.grade>=7?("<br>🏛️ <b>المسار:</b> "+(c.track==="general"?"عام — المواد المشتركة":"أزهر — الباقة الكاملة مع ركن طلاب الأزهر")):"")+"<br>📚 <b>أسئلة صفك:</b> "+arNum(COUNTS[c.grade])+" سؤالًا ولغزًا"+(c.fav?"<br>❤️ <b>مادتك المفضلة:</b> "+c.fav:"");
   $("wTip").textContent=c.grade>=7?"أنت "+verb+" لتحدي المليون الحقيقي: سلّم جوائز وأسئلة أعمق واستعداد للامتحانات.":c.age<=8?"في سنك الجميل ده هنتعلم واحنا بنلعب، وكل إجابة صح هتقرّبك من المليون!":c.age<=10?"أنت "+verb+" لتحديات أكبر: ألغاز أقوى وأسئلة أعمق في كل مواد الترم الأول.":"أنت من كبار الابتدائي و"+(c.gender==="g"?"قدّ":"قدّ")+" المسؤولية: أسئلة بمستوى الأبطال واستعداد حقيقي للامتحانات.";
   var day=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/864e5);
@@ -382,5 +382,18 @@ $("btnHome").onclick=home;
 })();
 </script>
 <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(function(){})}</script>
+<style>/* friendly skin v22 index */
+/* friendly skin v22 — لمسة ودودة للرئيسية */
+.wrap{background:radial-gradient(circle at 85% 0%,#ffd54a33 0,transparent 40%),radial-gradient(circle at 10% 100%,#ff8fab26 0,transparent 45%),radial-gradient(circle at 18% 8%,#1a7a6d 0,#0f3d3e 55%,#082530 100%)}
+h1.logo{text-shadow:0 3px 0 #00000033}
+.card{border-radius:28px;box-shadow:0 18px 44px #0008}
+.btn{border-radius:20px;background:linear-gradient(180deg,#22a08c,#1a7a6d);box-shadow:0 5px 0 #0d4f42}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #0d4f42}
+.gcard span{transition:.18s;border-radius:22px}
+.gcard span:hover{transform:translateY(-3px);box-shadow:0 10px 20px #0002}
+.gcard .num{background:linear-gradient(180deg,#ffe082,#ffd54a);box-shadow:0 4px 10px #b8860b44}
+.pill span,.avopt span{border-radius:18px}
+input[type=text],input[type=number],select{border-radius:16px}
+</style>
 </body>
 </html>
