@@ -755,7 +755,7 @@ window.__azParents=function(){
   var ageTip=!P.age?"":P.age<=8?"في هذه السن، اللعب القصير المتكرر أفضل من الجلسات الطويلة: جولة واحدة (١٠ أسئلة) في اليوم تكفي، واحتفلوا بكل تقدّم صغير.":P.age<=10?"في هذه السن، مدة التركيز تصل إلى ٢٠ دقيقة: جولة أو جولتان يوميًا، ودَعوه يشرح لكم إجابته بصوته — الشرح بصوت عالٍ يثبّت المعلومة.":"في هذه السن يبدأ الاستعداد للامتحانات: شجّعوه على حلّ جولة كاملة دون تلميحات، ومراجعة الشرح بعد كل خطأ — فالخطأ الذي يصحّحه بنفسه لا يتكرر.";
   var qhtml=PQ?('<div class="card"><h2>🧠 سؤال لبابا وماما</h2><p class="sync">من مادة '+PQ.subj+' — جاوبوا مع '+kid+' واتناقشوا في السبب:</p><div class="qtext">'+PQ.q+'</div><div id="azpq">'+PQ.ch.map(function(c,i){return '<button class="choice" data-azpq="'+i+'"><span>'+c+'</span></button>'}).join("")+'</div><div id="azpfb"></div><button class="btn small ghost" id="azpnew">🔄 سؤال جديد للأهل</button></div>'):'';
   var h='<div id="azparents"><h1>👨‍👩‍👧 ركن بابا وماما</h1>'
-   +'<p class="card">أهلًا بيكم! الركن ده معمول عشان تساعدوا '+kid+' يستمتع ويتعلم. '+his+' في كل مادة <b>١٠ تلميحات</b> بس — التلميح بيشيل اختيارات غلط وبيخصم ٥ نقط، وبيكسب تلميحات جديدة لما يكسب جولات في المادة.</p>'
+   +'<p class="card">أهلًا بكم! أُعدّ هذا الركن لمساعدة '+kid+' على الاستمتاع والتعلّم. '+his+' في كل مادة <b>١٠ تلميحات</b> فقط — التلميح يستبعد اختيارات خاطئة ويخصم ٥ نقاط، ويكسب تلميحات جديدة عندما يفوز بجولات في المادة.</p>'
    +qhtml
    +'<div class="card"><h2>🤝 كيف تساعدون '+son+'؟</h2><p>'+ageTip+'</p><p>· اسألوه كل يوم: «ماذا تعلّمتَ اليوم؟» ودَعوه يعلّمكم هو — أفضل تثبيت للمعلومة أن يشرحها بنفسه.<br>· اطّلعوا على تقريره من زرّ «تقريري» في اللعبة، وقارنوا تقدّمه أسبوعًا بأسبوع، وامدحوا الجهد لا الدرجة فقط.<br>· إذا واجه سؤالًا صعبًا، دعوه يستخدم تلميحًا أولًا قبل أن تخبروه بالإجابة.</p></div>'
    +'<div class="card"><h2>💬 أسئلة تفتح الكلام بعد اللعب</h2><p>· إيه أكتر سؤال عجبك النهاردة وليه؟<br>· إيه السؤال اللي غلطت فيه واتعلمت منه إيه؟<br>· لو هتعمل سؤال لبابا وماما، هيكون عن إيه؟<br>· إيه المادة اللي عايز تكسب فيها تلميحات زيادة؟</p></div>'
@@ -773,5 +773,21 @@ window.addEventListener("load",function(){var a=document.getElementById("app");i
 })();
 </script>
 <a href="index.html" style="position:fixed;bottom:14px;inset-inline-start:14px;z-index:99999;background:#0d3b3a;color:#fff;border:2px solid #f5c542;border-radius:999px;padding:10px 18px;font:700 15px system-ui;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.35)">🏠 الرئيسية واختيار الصف</a><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(function(){})}</script>
+<style>/* friendly skin v22 */
+/* friendly skin v22 — لمسة ودودة: ألوان أدفأ وزوايا أنعم وظلال أخف */
+.kid-root{background:linear-gradient(180deg,#fff8ec 0,#eaf6ff 55%,#e9fbef 100%)}
+.kid-root .top{background:linear-gradient(90deg,#1e6fd9,#12a5a0);border-radius:22px;box-shadow:0 4px 14px rgba(30,111,217,.25)}
+.kid-root .card{border-radius:26px;box-shadow:0 6px 18px rgba(31,38,135,.08);border:2px solid #ffe9c4}
+.kid-root .card.center{background:linear-gradient(180deg,#fffdf4,#fff3d6)}
+.kid-root .btn{background:linear-gradient(180deg,#ffa62b,#f08a00);border-radius:20px;box-shadow:0 5px 0 #c96a00,0 8px 16px rgba(240,138,0,.25)}
+.kid-root .btn:active{transform:translateY(3px) scale(.99);box-shadow:0 2px 0 #c96a00}
+.kid-root .btn.alt{background:linear-gradient(180deg,#2f80ed,#1e6fd9);box-shadow:0 5px 0 #155a9e,0 8px 16px rgba(30,111,217,.22)}
+.kid-root .btn.alt:active{box-shadow:0 2px 0 #155a9e}
+.kid-root .btn.ghost{border-radius:20px}
+.kid-root .choice{border-radius:18px;border-color:#ffd9a0}
+.kid-root .choice:hover{border-color:#f08a00;transform:translateY(-1px)}
+.kid-root .chip{border-radius:999px}
+.kid-root .toast{border-radius:18px}
+</style>
 </body>
 </html>
