@@ -1,27 +1,27 @@
 {
- "name": "من سيربح المليون — لعبة أسئلة تعليمية لكل الصفوف (رياض أطفال وابتدائي وإعدادي)",
- "short_name": "المليون",
- "description": "تطبيق أسئلة وألغاز للأزهر الابتدائي: ٢٥٠٠ سؤال بشرحها للصفوف من الأول إلى السادس، تلميحات محدودة لكل مادة، وركن لبابا وماما. يعمل بدون إنترنت بعد التثبيت.",
- "lang": "ar",
- "dir": "rtl",
- "start_url": "index.html",
- "scope": "./",
- "display": "standalone",
- "orientation": "portrait",
- "background_color": "#0d3b3a",
- "theme_color": "#0d3b3a",
- "icons": [
-  {
-   "src": "icon.svg",
-   "sizes": "any",
-   "type": "image/svg+xml",
-   "purpose": "any"
-  },
-  {
-   "src": "icon.svg",
-   "sizes": "any",
-   "type": "image/svg+xml",
-   "purpose": "maskable"
-  }
- ]
+  "name": "أبطال المستقبل — لعبة أسئلة تعليمية لكل الصفوف (رياض أطفال وابتدائي وإعدادي)",
+  "short_name": "أبطال المستقبل",
+  "description": "تطبيق أسئلة وألغاز للأزهر الابتدائي: ٢٥٠٠ سؤال بشرحها للصفوف من الأول إلى السادس، تلميحات محدودة لكل مادة، وركن لبابا وماما. يعمل بدون إنترنت بعد التثبيت.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d3b3a",
+  "theme_color": "#0d3b3a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
 }
