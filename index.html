@@ -162,7 +162,7 @@ input:focus,select:focus{border-color:#1a7a6d}
   <div class="card hidden" id="sectionsCard">
     <h2>📚 أقسام اللعبة</h2>
     <p class="hint">كل قسم لوحده، وتقدمك في كل صف محفوظ باسمك أنت بس.</p>
-    <p class="hint" id="visitorLine" style="text-align:center;font-size:15px">👋 أهلًا وسهلًا بك في «أبطال المستقبل» — <b>أنت الزائر رقم <span id="visitorNo">…</span></b></p>
+    <div id="visitorLine" style="margin:14px 0 4px;background:linear-gradient(180deg,#fffdf4,#ffeec2);border:2px solid #ffd54a;border-radius:20px;padding:14px 16px;text-align:center;box-shadow:0 6px 16px rgba(255,180,0,.18)"><div style="font-size:17px">👋 أهلًا وسهلًا بك في «أبطال المستقبل»</div><div style="font-size:21px;margin:6px 0">🎉 <b>أنت الزائر رقم <span id="visitorNo">…</span></b></div><div id="visitorTotalRow" style="font-size:15px;color:#7a5b00">🌟 عدد زوار أبطال المستقبل حتى الآن: <b><span id="visitorTotal">…</span></b></div><div style="font-size:13.5px;color:#8a6d1a;margin-top:4px">رقمك محفوظ عندنا — زورنا كل يوم وشاهد العدد يكبر وأنت تكبر معه في العلم!</div></div>
     <h3 style="margin:16px 0 8px">🌸 رياض الأطفال</h3>
     <a href="kg.html" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#ff5e9c,#ff8fb8);color:#fff;border-radius:18px;padding:14px 18px;text-decoration:none;box-shadow:0 8px 20px rgba(255,94,156,.35)"><span style="font-size:36px">🌸</span><span><b style="font-size:20px">رياض الأطفال — كلماتي الأولى</b><br><small>حروف وكلمات وعوالم لعب بصرية — قسم مستقل للأطفال الصغيرين</small></span></a>
     <h3 style="margin:20px 0 8px">📗 المرحلة الابتدائية</h3>
@@ -333,8 +333,11 @@ function setTrackAndGo(tr){
 var __ideaRec=null,__ideaChunks=[],__ideaAudioB64="";
 (function(){var el=$("visitorNo");if(!el)return;var saved=null;try{saved=localStorage.getItem("mw_visitor_no")}catch(e){}
  function show(v){el.textContent=arNum(v)}
- if(saved){show(saved);return}
- fetch("https://abacus.jasoncameron.dev/hit/abtal-almostaqbal-2026/visitors",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d&&d.value){try{localStorage.setItem("mw_visitor_no",String(d.value))}catch(e){}show(d.value)}}).catch(function(){var L=$("visitorLine");if(L)L.style.display="none"});
+ function showTotal(v){var tt=$("visitorTotal");if(tt)tt.textContent=arNum(v)}
+ function hideTotal(){var r=$("visitorTotalRow");if(r)r.style.display="none"}
+ function getTotal(){fetch("https://abacus.jasoncameron.dev/get/abtal-almostaqbal-2026/visitors",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d&&d.value)showTotal(d.value);else hideTotal()}).catch(hideTotal)}
+ if(saved){show(saved);getTotal();return}
+ fetch("https://abacus.jasoncameron.dev/hit/abtal-almostaqbal-2026/visitors",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){if(d&&d.value){try{localStorage.setItem("mw_visitor_no",String(d.value))}catch(e){}show(d.value);showTotal(d.value)}}).catch(function(){var L=$("visitorLine");if(L)L.style.display="none"});
 })();
 $("btnIdeas").onclick=function(){$("guideCard").classList.add("hidden");$("ideasCard").classList.toggle("hidden")};
 $("btnGuide").onclick=function(){$("ideasCard").classList.add("hidden");$("guideCard").classList.toggle("hidden")};
